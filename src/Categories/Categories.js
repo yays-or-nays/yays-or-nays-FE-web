@@ -18,13 +18,13 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-export default function Categories() {
+export default function Categories({getHotTake}) {
   const [categories, setCategories] = useState([])
 
   useEffect(() => {
     fetch("https://yays-or-nays-be.herokuapp.com/graphql", requestOptions)
       .then(response => response.json())
-      .then(result => console.log(result))
+      .then(result => setCategories(result.data.tags))
       .catch(error => console.log('error', error));
   }, [])
 
@@ -34,7 +34,7 @@ export default function Categories() {
         className='category-button'
         id={category.id}
         key={category.id}
-        to="/hottakes">
+        onClick={() => getHotTake(category.id)}>
         <p>
           {categories.length ? category.category : 'Loading'}
         </p>
@@ -43,9 +43,9 @@ export default function Categories() {
   }) : <p>Loading...</p>;
 
   return (
-    <main>
+    <nav>
       {categoryButtons}
-    </main>
+    </nav>
   )
 }
 
