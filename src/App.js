@@ -27,13 +27,9 @@ function App() {
   return (
     <div className="App">
       <Categories getHotTake={getHotTake} />
-      <HotTake hotTake={hotTake} />
+      <HotTake hotTake={hotTake} getHotTake={getHotTake}/>
     </div>
   );
 }
 
 export default App;
-
-
-
-
