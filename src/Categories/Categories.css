@@ -1,0 +1,15 @@
+.category-button {
+  background-color: #FF2D2E;
+  border-radius: 10px;
+  color: white;
+  margin: 20px;
+  margin-top: 40px;
+  padding: 4px;
+  transition: 0.5s all;
+}
+
+.category-button:hover {
+  background-color: rgb(255, 114, 114);
+  color: black;
+  cursor: pointer;
+}
