@@ -1,5 +1,57 @@
 .hot-take-img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   object-fit: contain;
+}
+
+.logo {
+  width: 150px;
+}
+
+.no-hot-take {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.emblem {
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.hot-take {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  justify-self: center;
+  width: 100%;
+}
+
+.question {
+  background-color: bisque;
+  border-radius: 10px;
+  font-weight: bolder;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.button {
+  background-color: #FF2D2E;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  height: 30px;
+  margin: 30px;
+  width: 100px;
+  transition: 0.5s all;
+}
+
+.button:hover {
+  background-color: rgb(255, 114, 114);
+  color: black;
+  cursor: pointer;
 }

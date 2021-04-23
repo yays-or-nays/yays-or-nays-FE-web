@@ -3,6 +3,7 @@ import './HotTake.css';
 import Result from '../Results/Result';
 import axios from 'axios';
 import {mutation} from 'gql-query-builder';
+import logo from '../logo.png';
 
 export default function HotTake({hotTake, getHotTake}) {
   const [resultDisplay, setResultDisplay] = useState(false);
@@ -56,14 +57,15 @@ export default function HotTake({hotTake, getHotTake}) {
     if (!resultDisplay && hotTake) {
       return (
         <main className='hot-take'>
-          <p>{hotTake.question}</p>
+          <img className='logo' src={logo} />
+          <p className='question'>{hotTake.question}</p>
           <img className="hot-take-img" src={hotTake.picture} alt='hot take' />
-          <section>
-            <button onClick={() => {
+          <section className="buttons">
+            <button className='button' onClick={() => {
               hotTake.yesVote++
               onClick('Yay');
             }}>Yay</button>
-            <button onClick={() => {
+            <button className='button' onClick={() => {
               hotTake.noVote++
               onClick('Nay');
             }}>Nay</button>
@@ -77,7 +79,7 @@ export default function HotTake({hotTake, getHotTake}) {
       } else {
         return(
         <main className='no-hot-take'>
-          <p>Select a Category!</p>
+          <p className='emblem'>Select a Category!</p>
         </main>
       )}
   }

@@ -33,7 +33,7 @@ export default function Categories({getHotTake}) {
       <section
         className='category-button'
         id={category.id}
-        key={category.id}
+ key={category.id}
         onClick={() => getHotTake(category.id)}>
         <p>
           {categories.length ? category.category : 'Loading'}
@@ -44,11 +44,8 @@ export default function Categories({getHotTake}) {
 
   return (
     <nav>
+      <h1>Categories</h1>
       {categoryButtons}
     </nav>
   )
 }
-
-
-
-
